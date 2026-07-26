@@ -1,0 +1,2572 @@
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Talari Harsha Vardhan Babu | Portfolio & CSE Undergraduate</title>
+    <meta name="description" content="Official portfolio of Talari Harsha Vardhan Babu - B.Tech Computer Science Undergraduate at JNTUGV. Showcasing AI projects, web systems, and software engineering skills.">
+    <meta name="keywords" content="Talari Harsha Vardhan Babu, Computer Science, Portfolio, JNTUGV, Software Developer, B.Tech CSE">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,600;1,400&family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        /* CSS RESET & VARIABLES */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            /* Elegant Dark Theme Palette (Default) */
+            --bg-primary: #0A0A0A;
+            --bg-secondary: #121212;
+            --bg-glass: rgba(255, 255, 255, 0.04);
+            --bg-glass-card: rgba(255, 255, 255, 0.03);
+            --border-glass: rgba(255, 255, 255, 0.08);
+            --border-glow: rgba(59, 130, 246, 0.35);
+            
+            --text-main: #F8FAFC;
+            --text-muted: #A1A1AA;
+            --text-subtle: #71717A;
+            
+            --brand-primary: #3B82F6;
+            --brand-hover: #60A5FA;
+            --brand-light: rgba(59, 130, 246, 0.12);
+            --brand-accent: #22D3EE;
+            --brand-gradient: linear-gradient(135deg, #3B82F6 0%, #60A5FA 50%, #06B6D4 100%);
+            
+            --glass-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.6), 0 0 20px rgba(59, 130, 246, 0.08);
+            --hero-glow: radial-gradient(circle at 50% 30%, rgba(59, 130, 246, 0.18) 0%, rgba(34, 211, 238, 0.06) 50%, transparent 75%);
+            --card-hover-y: -4px;
+            
+            --font-display: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+            --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            --font-mono: 'JetBrains Mono', monospace;
+            
+            --transition-smooth: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        /* Light Theme Class (Option) */
+        .light {
+            --bg-primary: #F8FAFC;
+            --bg-secondary: #FFFFFF;
+            --bg-glass: rgba(255, 255, 255, 0.8);
+            --bg-glass-card: rgba(255, 255, 255, 0.7);
+            --border-glass: rgba(226, 232, 240, 0.8);
+            --border-glow: rgba(59, 130, 246, 0.3);
+            
+            --text-main: #0F172A;
+            --text-muted: #475569;
+            --text-subtle: #64748B;
+            
+            --brand-primary: #2563EB;
+            --brand-hover: #1D4ED8;
+            --brand-light: #EFF6FF;
+            --brand-accent: #06B6D4;
+            --brand-gradient: linear-gradient(135deg, #2563EB 0%, #3B82F6 50%, #06B6D4 100%);
+            
+            --glass-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.02);
+            --hero-glow: radial-gradient(circle at 50% 30%, rgba(59, 130, 246, 0.15) 0%, rgba(6, 182, 212, 0.05) 50%, transparent 70%);
+        }
+
+        body {
+            font-family: var(--font-body);
+            background-color: var(--bg-primary);
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+            transition: background-color 0.4s ease, color 0.4s ease;
+            position: relative;
+        }
+
+        /* Background Animated Orbs */
+        .bg-orb {
+            position: fixed;
+            border-radius: 50%;
+            filter: blur(100px);
+            z-index: -1;
+            pointer-events: none;
+            opacity: 0.6;
+            animation: orbFloat 20s infinite alternate ease-in-out;
+        }
+
+        .bg-orb-1 {
+            top: -100px;
+            left: -100px;
+            width: 500px;
+            height: 500px;
+            background: rgba(59, 130, 246, 0.2);
+        }
+
+        .bg-orb-2 {
+            top: 40%;
+            right: -150px;
+            width: 600px;
+            height: 600px;
+            background: rgba(6, 182, 212, 0.15);
+            animation-delay: -5s;
+        }
+
+        .bg-orb-3 {
+            bottom: -100px;
+            left: 20%;
+            width: 450px;
+            height: 450px;
+            background: rgba(99, 102, 241, 0.15);
+            animation-delay: -10s;
+        }
+
+        @keyframes orbFloat {
+            0% { transform: translate(0, 0) scale(1); }
+            50% { transform: translate(60px, 40px) scale(1.1); }
+            100% { transform: translate(-40px, 80px) scale(0.95); }
+        }
+
+        /* TYPOGRAPHY UTILITIES */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-display);
+            font-weight: 700;
+            line-height: 1.2;
+            color: var(--text-main);
+        }
+
+        .gradient-text {
+            background: var(--brand-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: inline-block;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        /* GLASS PANEL STYLING */
+        .glass-panel {
+            background: var(--bg-glass);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid var(--border-glass);
+            border-radius: 20px;
+            box-shadow: var(--glass-shadow);
+            transition: var(--transition-smooth);
+        }
+
+        .glass-card {
+            background: var(--bg-glass-card);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid var(--border-glass);
+            border-radius: 16px;
+            box-shadow: var(--glass-shadow);
+            transition: var(--transition-smooth);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .glass-card:hover {
+            transform: translateY(var(--card-hover-y));
+            border-color: var(--border-glow);
+            box-shadow: 0 20px 30px -10px rgba(37, 99, 235, 0.15);
+        }
+
+        /* STICKY NAVBAR */
+        .navbar {
+            position: fixed;
+            top: 1rem;
+            left: 50%;
+            transform: translateX(-50%);
+            width: calc(100% - 2rem);
+            max-width: 1100px;
+            z-index: 1000;
+            padding: 0.75rem 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-radius: 999px;
+        }
+
+        .nav-logo {
+            font-family: var(--font-display);
+            font-weight: 800;
+            font-size: 1.25rem;
+            text-decoration: none;
+            color: var(--text-main);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .nav-logo-badge {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: var(--brand-gradient);
+            color: #FFFFFF;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.85rem;
+            font-weight: 700;
+            box-shadow: 0 4px 10px rgba(37, 99, 235, 0.3);
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 1.75rem;
+            list-style: none;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: var(--text-muted);
+            font-weight: 500;
+            font-size: 0.925rem;
+            transition: var(--transition-smooth);
+            position: relative;
+        }
+
+        .nav-link:hover, .nav-link.active {
+            color: var(--brand-primary);
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0%;
+            height: 2px;
+            background: var(--brand-primary);
+            transition: var(--transition-smooth);
+            border-radius: 2px;
+        }
+
+        .nav-link:hover::after, .nav-link.active::after {
+            width: 100%;
+        }
+
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        /* BUTTONS */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 0.65rem 1.35rem;
+            font-size: 0.925rem;
+            font-weight: 600;
+            border-radius: 999px;
+            text-decoration: none;
+            cursor: pointer;
+            transition: var(--transition-smooth);
+            border: none;
+            outline: none;
+        }
+
+        .btn-primary {
+            background: var(--brand-gradient);
+            color: #FFFFFF;
+            box-shadow: 0 8px 20px -4px rgba(37, 99, 235, 0.4);
+        }
+
+        .btn-primary:hover {
+            box-shadow: 0 12px 25px -4px rgba(37, 99, 235, 0.6);
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background: var(--bg-glass);
+            color: var(--text-main);
+            border: 1px solid var(--border-glass);
+        }
+
+        .btn-secondary:hover {
+            background: var(--brand-light);
+            border-color: var(--brand-primary);
+            color: var(--brand-primary);
+            transform: translateY(-2px);
+        }
+
+        .btn-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--bg-glass);
+            border: 1px solid var(--border-glass);
+            color: var(--text-main);
+            cursor: pointer;
+            transition: var(--transition-smooth);
+        }
+
+        .btn-icon:hover {
+            background: var(--brand-light);
+            color: var(--brand-primary);
+            transform: rotate(15deg) scale(1.05);
+        }
+
+        /* MOBILE MENU TOGGLE */
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--text-main);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* HERO SECTION */
+        .hero-section {
+            min-height: 100vh;
+            padding-top: 8rem;
+            padding-bottom: 4rem;
+            display: flex;
+            align-items: center;
+            position: relative;
+            background: var(--hero-glow);
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3.5rem;
+            align-items: center;
+        }
+
+        /* HERO GLASS PHONE / FRAME CUTOUT */
+        .hero-image-wrapper {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            perspective: 1000px;
+        }
+
+        .hero-glass-frame {
+            width: 320px;
+            height: 420px;
+            border-radius: 36px;
+            background: linear-gradient(145deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.05) 100%);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            border: 1.5px solid rgba(255, 255, 255, 0.4);
+            box-shadow: 
+                0 30px 60px -15px rgba(0, 0, 0, 0.15),
+                inset 0 0 20px rgba(255, 255, 255, 0.2),
+                inset 0 2px 2px rgba(255, 255, 255, 0.5);
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            text-align: center;
+            transform-style: preserve-3d;
+            transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+            animation: heroFloat 6s infinite alternate ease-in-out;
+        }
+
+        .dark .hero-glass-frame {
+            background: linear-gradient(145deg, rgba(255, 255, 255, 0.1) 0%, rgba(15, 23, 42, 0.4) 100%);
+            border-color: rgba(255, 255, 255, 0.12);
+            box-shadow: 
+                0 30px 60px -15px rgba(0, 0, 0, 0.5),
+                0 0 40px rgba(59, 130, 246, 0.2),
+                inset 0 0 15px rgba(255, 255, 255, 0.05);
+        }
+
+        .hero-glass-frame:hover {
+            transform: translateY(-8px) rotateY(4deg) rotateX(-2deg);
+        }
+
+        @keyframes heroFloat {
+            0% { transform: translateY(0px) rotate(0deg); }
+            100% { transform: translateY(-12px) rotate(1deg); }
+        }
+
+        /* GENERATIVE INITIALS / PHOTO AVATAR */
+        .avatar-cutout {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            background: var(--bg-secondary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 15px 35px rgba(59, 130, 246, 0.35);
+            border: 4px solid var(--border-glow);
+            position: relative;
+            margin-bottom: 1.5rem;
+            overflow: visible;
+        }
+
+        .avatar-img-container {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            overflow: hidden;
+            position: relative;
+            z-index: 2;
+        }
+
+        .avatar-cutout img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top center;
+        }
+
+        .avatar-upload-btn {
+            position: absolute;
+            bottom: 2px;
+            right: 2px;
+            width: 32px;
+            height: 32px;
+            background: var(--brand-gradient);
+            color: #FFFFFF;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            border: 2px solid var(--bg-secondary);
+            transition: transform 0.2s ease, background 0.2s ease;
+            z-index: 10;
+        }
+
+        .avatar-upload-btn:hover {
+            transform: scale(1.15);
+        }
+
+        .svg-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            vertical-align: middle;
+            shrink: 0;
+        }
+
+        /* CINEMATIC SMOOTH GLOW BEHIND AVATAR (NO WHITE FLASH) */
+        .avatar-cutout::after {
+            content: '';
+            position: absolute;
+            inset: -6px;
+            border-radius: 50%;
+            background: conic-gradient(from 0deg, var(--brand-primary), #6366F1, var(--brand-accent), var(--brand-primary));
+            opacity: 0.4;
+            filter: blur(14px);
+            z-index: 1;
+            pointer-events: none;
+            animation: cinematicAura 7s ease-in-out infinite alternate;
+        }
+
+        @keyframes cinematicAura {
+            0% {
+                opacity: 0.25;
+                filter: blur(10px);
+                transform: scale(0.96);
+            }
+            50% {
+                opacity: 0.50;
+                filter: blur(16px);
+                transform: scale(1.04);
+            }
+            100% {
+                opacity: 0.35;
+                filter: blur(12px);
+                transform: scale(1.00);
+            }
+        }
+
+        /* FLOATING BADGES AROUND HERO */
+        .floating-badge {
+            position: absolute;
+            padding: 0.5rem 1rem;
+            border-radius: 999px;
+            background: var(--bg-glass);
+            backdrop-filter: blur(12px);
+            border: 1px solid var(--border-glass);
+            box-shadow: var(--glass-shadow);
+            font-size: 0.825rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            z-index: 10;
+            animation: badgeFloat 4s infinite alternate ease-in-out;
+        }
+
+        .badge-top-left {
+            top: 20px;
+            left: -30px;
+            animation-delay: 0s;
+        }
+
+        .badge-bottom-right {
+            bottom: 30px;
+            right: -30px;
+            animation-delay: -2s;
+        }
+
+        @keyframes badgeFloat {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-10px); }
+        }
+
+        .pulse-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #10B981;
+            box-shadow: 0 0 10px #10B981;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(0.95); opacity: 0.8; }
+            50% { transform: scale(1.2); opacity: 1; }
+            100% { transform: scale(0.95); opacity: 0.8; }
+        }
+
+        /* HERO CONTENT */
+        .hero-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.4rem 1rem;
+            border-radius: 999px;
+            background: var(--brand-light);
+            color: var(--brand-primary);
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: 1.25rem;
+            border: 1px solid rgba(59, 130, 246, 0.2);
+        }
+
+        .hero-title {
+            font-size: 3.25rem;
+            letter-spacing: -0.02em;
+            margin-bottom: 1rem;
+        }
+
+        .hero-subtitle {
+            font-size: 1.25rem;
+            color: var(--text-muted);
+            font-weight: 500;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-bio {
+            font-size: 1.05rem;
+            color: var(--text-subtle);
+            margin-bottom: 2rem;
+            max-width: 520px;
+        }
+
+        .hero-btns {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 2.5rem;
+        }
+
+        .hero-stats {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--border-glass);
+        }
+
+        .stat-item h4 {
+            font-size: 1.5rem;
+            color: var(--text-main);
+        }
+
+        .stat-item p {
+            font-size: 0.825rem;
+            color: var(--text-subtle);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            font-weight: 600;
+        }
+
+        /* SECTION STYLING */
+        .section {
+            padding: 6rem 0;
+            position: relative;
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 650px;
+            margin: 0 auto 3.5rem auto;
+        }
+
+        .section-subtitle {
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            color: var(--brand-primary);
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .section-title {
+            font-size: 2.25rem;
+            margin-bottom: 1rem;
+        }
+
+        .section-desc {
+            color: var(--text-muted);
+            font-size: 1rem;
+        }
+
+        /* ABOUT SECTION */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 2rem;
+            align-items: stretch;
+        }
+
+        .about-main-card {
+            padding: 2.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .about-text {
+            color: var(--text-muted);
+            font-size: 1.05rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+
+        .about-highlights {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .highlight-box {
+            padding: 1rem;
+            border-radius: 12px;
+            background: var(--bg-primary);
+            border: 1px solid var(--border-glass);
+        }
+
+        .highlight-box h5 {
+            font-size: 0.95rem;
+            margin-bottom: 0.25rem;
+            color: var(--brand-primary);
+        }
+
+        .highlight-box p {
+            font-size: 0.85rem;
+            color: var(--text-subtle);
+        }
+
+        .info-list-card {
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+        }
+
+        .info-row {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+
+        .info-icon {
+            width: 38px;
+            height: 38px;
+            border-radius: 10px;
+            background: var(--brand-light);
+            color: var(--brand-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            font-size: 1.1rem;
+        }
+
+        .info-content label {
+            display: block;
+            font-size: 0.8rem;
+            color: var(--text-subtle);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            font-weight: 600;
+        }
+
+        .info-content span, .info-content a {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--text-main);
+            text-decoration: none;
+        }
+
+        .info-content a:hover {
+            color: var(--brand-primary);
+        }
+
+        /* SKILLS SECTION */
+        .skills-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 0.75rem;
+            margin-bottom: 2.5rem;
+            flex-wrap: wrap;
+        }
+
+        .tab-btn {
+            padding: 0.6rem 1.25rem;
+            border-radius: 999px;
+            background: var(--bg-glass);
+            border: 1px solid var(--border-glass);
+            color: var(--text-muted);
+            font-weight: 600;
+            font-size: 0.875rem;
+            cursor: pointer;
+            transition: var(--transition-smooth);
+        }
+
+        .tab-btn:hover, .tab-btn.active {
+            background: var(--brand-primary);
+            color: #FFFFFF;
+            border-color: var(--brand-primary);
+            box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .skill-card {
+            padding: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .skill-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            background: var(--brand-light);
+            color: var(--brand-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        .skill-info {
+            flex-grow: 1;
+        }
+
+        .skill-info h4 {
+            font-size: 1rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .skill-info p {
+            font-size: 0.825rem;
+            color: var(--text-subtle);
+        }
+
+        .skill-tag {
+            font-family: var(--font-mono);
+            font-size: 0.75rem;
+            padding: 0.2rem 0.5rem;
+            border-radius: 6px;
+            background: var(--bg-primary);
+            color: var(--brand-primary);
+            border: 1px solid var(--border-glass);
+            margin-top: 0.4rem;
+            display: inline-block;
+        }
+
+        /* PROJECTS SECTION */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            padding: 1.75rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+        }
+
+        .project-header {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+        }
+
+        .project-category {
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--brand-accent);
+            background: rgba(6, 182, 212, 0.1);
+            padding: 0.25rem 0.75rem;
+            border-radius: 999px;
+            border: 1px solid rgba(6, 182, 212, 0.2);
+        }
+
+        .project-title {
+            font-size: 1.3rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .project-desc {
+            color: var(--text-muted);
+            font-size: 0.925rem;
+            margin-bottom: 1.25rem;
+            line-height: 1.6;
+        }
+
+        .project-features {
+            list-style: none;
+            margin-bottom: 1.5rem;
+        }
+
+        .project-features li {
+            font-size: 0.85rem;
+            color: var(--text-subtle);
+            margin-bottom: 0.4rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .project-features li::before {
+            content: '✓';
+            color: var(--brand-primary);
+            font-weight: 700;
+        }
+
+        .tech-stack-pills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.4rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .tech-pill {
+            font-family: var(--font-mono);
+            font-size: 0.75rem;
+            padding: 0.25rem 0.6rem;
+            border-radius: 6px;
+            background: var(--bg-primary);
+            color: var(--text-muted);
+            border: 1px solid var(--border-glass);
+        }
+
+        .project-footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-top: 1rem;
+            border-top: 1px solid var(--border-glass);
+        }
+
+        .project-link {
+            text-decoration: none;
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: var(--brand-primary);
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+            transition: var(--transition-smooth);
+        }
+
+        .project-link:hover {
+            color: var(--brand-hover);
+            transform: translateX(3px);
+        }
+
+        /* GITHUB LIVE REPOS SECTION */
+        .github-controls {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .search-box {
+            position: relative;
+            flex-grow: 1;
+            max-width: 380px;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 0.65rem 1rem 0.65rem 2.5rem;
+            border-radius: 999px;
+            background: var(--bg-glass);
+            border: 1px solid var(--border-glass);
+            color: var(--text-main);
+            font-family: var(--font-body);
+            font-size: 0.9rem;
+            outline: none;
+            transition: var(--transition-smooth);
+        }
+
+        .search-input:focus {
+            border-color: var(--brand-primary);
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+        }
+
+        .search-icon {
+            position: absolute;
+            left: 0.9rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-subtle);
+        }
+
+        .repo-card {
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+        }
+
+        .repo-name {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .repo-stats {
+            display: flex;
+            align-items: center;
+            gap: 1.25rem;
+            font-size: 0.825rem;
+            color: var(--text-subtle);
+            margin-top: 1rem;
+        }
+
+        .repo-stat {
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+
+        .lang-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        /* GALLERY SHOWCASE GRID */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .gallery-card {
+            height: 220px;
+            border-radius: 16px;
+            overflow: hidden;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .gallery-bg {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, rgba(37, 99, 235, 0.8), rgba(6, 182, 212, 0.8));
+            color: #FFFFFF;
+            padding: 1.5rem;
+            text-align: center;
+            transition: var(--transition-smooth);
+        }
+
+        .gallery-card:hover .gallery-bg {
+            transform: scale(1.05);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(15, 23, 42, 0.7);
+            backdrop-filter: blur(4px);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 1.25rem;
+            opacity: 0;
+            transition: var(--transition-smooth);
+        }
+
+        .gallery-card:hover .gallery-overlay {
+            opacity: 1;
+        }
+
+        .gallery-overlay h4 {
+            color: #FFFFFF;
+            font-size: 1.05rem;
+        }
+
+        .gallery-overlay p {
+            color: #CBD5E1;
+            font-size: 0.825rem;
+        }
+
+        /* EDUCATION TIMELINE */
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 20px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: var(--border-glass);
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-left: 3.5rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .timeline-dot {
+            position: absolute;
+            left: 11px;
+            top: 0;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: var(--brand-primary);
+            border: 4px solid var(--bg-primary);
+            box-shadow: 0 0 0 2px var(--brand-primary);
+        }
+
+        .timeline-card {
+            padding: 1.75rem;
+        }
+
+        .timeline-date {
+            font-family: var(--font-mono);
+            font-size: 0.8rem;
+            color: var(--brand-primary);
+            font-weight: 600;
+            margin-bottom: 0.4rem;
+        }
+
+        .timeline-title {
+            font-size: 1.2rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .timeline-institution {
+            color: var(--text-muted);
+            font-weight: 600;
+            font-size: 0.95rem;
+            margin-bottom: 0.75rem;
+        }
+
+        /* CONTACT SECTION */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 2.5rem;
+        }
+
+        .contact-info-card {
+            padding: 2.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.75rem;
+        }
+
+        .contact-method {
+            display: flex;
+            align-items: center;
+            gap: 1.25rem;
+        }
+
+        .contact-icon-box {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            background: var(--brand-light);
+            color: var(--brand-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+            flex-shrink: 0;
+        }
+
+        .contact-details label {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--text-subtle);
+            font-weight: 600;
+            display: block;
+        }
+
+        .contact-details p, .contact-details a {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text-main);
+            text-decoration: none;
+        }
+
+        .contact-form-card {
+            padding: 2.5rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.25rem;
+        }
+
+        .form-label {
+            display: block;
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: 0.4rem;
+            color: var(--text-main);
+        }
+
+        .form-input, .form-textarea {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border-radius: 10px;
+            background: var(--bg-primary);
+            border: 1px solid var(--border-glass);
+            color: var(--text-main);
+            font-family: var(--font-body);
+            font-size: 0.925rem;
+            outline: none;
+            transition: var(--transition-smooth);
+        }
+
+        .form-input:focus, .form-textarea:focus {
+            border-color: var(--brand-primary);
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+        }
+
+        .form-textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        /* RESUME MODAL */
+        .modal-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(8px);
+            z-index: 2000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1.5rem;
+            opacity: 0;
+            pointer-events: none;
+            transition: var(--transition-smooth);
+        }
+
+        .modal-overlay.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .modal-card {
+            width: 100%;
+            max-width: 800px;
+            max-height: 90vh;
+            background: var(--bg-secondary);
+            border-radius: 20px;
+            border: 1px solid var(--border-glass);
+            overflow-y: auto;
+            padding: 2.5rem;
+            position: relative;
+            box-shadow: var(--glass-shadow);
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 1.25rem;
+            right: 1.25rem;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: var(--bg-primary);
+            border: 1px solid var(--border-glass);
+            color: var(--text-main);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 1.2rem;
+            transition: var(--transition-smooth);
+        }
+
+        .modal-close:hover {
+            background: #EF4444;
+            color: #FFFFFF;
+        }
+
+        /* TOAST NOTIFICATION */
+        .toast {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            padding: 0.85rem 1.5rem;
+            border-radius: 999px;
+            background: var(--brand-primary);
+            color: #FFFFFF;
+            font-weight: 600;
+            font-size: 0.9rem;
+            box-shadow: 0 10px 25px rgba(37, 99, 235, 0.4);
+            z-index: 3000;
+            transform: translateY(100px);
+            opacity: 0;
+            transition: var(--transition-smooth);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .toast.show {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        /* FOOTER */
+        .footer {
+            padding: 3rem 0;
+            border-top: 1px solid var(--border-glass);
+            text-align: center;
+            color: var(--text-subtle);
+            font-size: 0.9rem;
+        }
+
+        /* RESPONSIVE DESIGN */
+        @media (max-width: 992px) {
+            .hero-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero-image-wrapper {
+                order: -1;
+            }
+
+            .hero-bio {
+                margin: 0 auto 2rem auto;
+            }
+
+            .hero-btns {
+                justify-content: center;
+            }
+
+            .hero-stats {
+                justify-content: center;
+            }
+
+            .about-grid, .contact-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                position: fixed;
+                top: 5rem;
+                left: 1rem;
+                right: 1rem;
+                background: var(--bg-glass);
+                backdrop-filter: blur(20px);
+                border: 1px solid var(--border-glass);
+                border-radius: 20px;
+                padding: 1.5rem;
+                flex-direction: column;
+                gap: 1.25rem;
+                box-shadow: var(--glass-shadow);
+            }
+
+            .nav-links.mobile-open {
+                display: flex;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .hero-title {
+                font-size: 2.25rem;
+            }
+
+            .badge-top-left, .badge-bottom-right {
+                display: none;
+            }
+
+            .hero-glass-frame {
+                width: 280px;
+                height: 380px;
+            }
+        }
+
+        /* PRINT STYLING FOR RESUME */
+        @media print {
+            body * {
+                visibility: hidden;
+            }
+            .modal-card, .modal-card * {
+                visibility: visible;
+            }
+            .modal-card {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                box-shadow: none;
+                border: none;
+            }
+            .modal-close, .modal-actions {
+                display: none !important;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Background Ambient Orbs -->
+    <div class="bg-orb bg-orb-1"></div>
+    <div class="bg-orb bg-orb-2"></div>
+    <div class="bg-orb bg-orb-3"></div>
+
+    <!-- STICKY NAVBAR -->
+    <nav class="navbar glass-panel">
+        <a href="#" class="nav-logo">
+            <div class="nav-logo-badge">TH</div>
+            <span>HARSHA</span>
+        </a>
+
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#skills" class="nav-link">Skills</a></li>
+            <li><a href="#projects" class="nav-link">Projects</a></li>
+            <li><a href="#github" class="nav-link">GitHub Work</a></li>
+            <li><a href="#gallery" class="nav-link">Gallery</a></li>
+            <li><a href="#education" class="nav-link">Education</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+
+        <div class="nav-actions">
+            <button class="btn-icon" id="themeToggle" title="Toggle Light/Dark Theme">
+                <span id="themeIcon" class="svg-icon">
+                    <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+                </span>
+            </button>
+            <button class="btn btn-primary" onclick="openResumeModal()">
+                Resume
+            </button>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+            </button>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="hero-section" id="hero">
+        <div class="container">
+            <div class="hero-grid">
+                
+                <!-- Hero Left: Text & Actions -->
+                <div class="hero-content">
+                    <div class="hero-tag">
+                        <span class="pulse-dot"></span>
+                        Available for Placements & Internships
+                    </div>
+                    <h1 class="hero-title">
+                        Hi, I'm <span class="gradient-text">Talari Harsha</span><br>Vardhan Babu
+                    </h1>
+                    <h2 class="hero-subtitle">
+                        B.Tech Computer Science Undergraduate | JNTUGV Class of 2026
+                    </h2>
+                    <p class="hero-bio">
+                        Motivated CS student passionate about building practical software, AI-powered applications, and smart data systems. Focused on continuous technical growth, smart prompt engineering, and solving real-world problems.
+                    </p>
+
+                    <div class="hero-btns">
+                        <a href="#projects" class="btn btn-primary">
+                            Explore Projects
+                            <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="margin-left:0.35rem;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                        </a>
+                        <a href="#" class="btn btn-secondary" onclick="openResumeModal()">
+                            <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="margin-right:0.35rem;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                            View Resume
+                        </a>
+                        <a href="#contact" class="btn btn-secondary">
+                            Get in Touch
+                        </a>
+                    </div>
+
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <h4>4th Year</h4>
+                            <p>Current Semester</p>
+                        </div>
+                        <div class="stat-item">
+                            <h4>5+</h4>
+                            <p>Academic Projects</p>
+                        </div>
+                        <div class="stat-item">
+                            <h4>10+</h4>
+                            <p>GitHub Repos</p>
+                        </div>
+                        <div class="stat-item">
+                            <h4>Eluru, IN</h4>
+                            <p>Location</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hero Right: iPhone-style Glass Cutout Panel -->
+                <div class="hero-image-wrapper">
+                    
+                    <!-- Floating Badge 1 -->
+                    <div class="floating-badge badge-top-left">
+                        <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="color:var(--brand-primary); margin-right:0.35rem;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
+                        Web Development & Cyber Security
+                    </div>
+
+                    <!-- Glass Phone Frame with Profile Photo -->
+                    <div class="hero-glass-frame">
+                        <div class="avatar-cutout">
+                            <div class="avatar-img-container">
+                                <img id="profileImg" src="/profile.jpg" alt="Talari Harsha Vardhan Babu" referrerPolicy="no-referrer" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&q=80&w=600';" />
+                            </div>
+                            <label for="profilePhotoInput" class="avatar-upload-btn" title="Upload your real profile photo">
+                                <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                            </label>
+                            <input type="file" id="profilePhotoInput" accept="image/*" style="display:none;" onchange="uploadRealPhoto(event)" />
+                        </div>
+                        <h3 style="font-size: 1.25rem; margin-bottom: 0.25rem; color: var(--text-main);">
+                            Talari Harsha
+                        </h3>
+                        <p style="font-size: 0.85rem; color: var(--text-subtle); margin-bottom: 1.25rem;">
+                            CS Undergraduate @ JNTUGV
+                        </p>
+                        
+                        <div style="width: 100%; display: flex; flex-direction: column; gap: 0.5rem; text-align: left;">
+                            <div style="display: flex; justify-content: space-between; font-size: 0.75rem; font-weight: 600; color: var(--text-subtle);">
+                                <span>Java & Python</span>
+                                <span style="color: var(--brand-primary);">Advanced</span>
+                            </div>
+                            <div style="width: 100%; height: 6px; background: var(--bg-primary); border-radius: 999px; overflow: hidden;">
+                                <div style="width: 88%; height: 100%; background: var(--brand-gradient); border-radius: 999px;"></div>
+                            </div>
+
+                            <div style="display: flex; justify-content: space-between; font-size: 0.75rem; font-weight: 600; color: var(--text-subtle); margin-top: 0.5rem;">
+                                <span>Smart AI Workflows</span>
+                                <span style="color: var(--brand-accent);">Expert</span>
+                            </div>
+                            <div style="width: 100%; height: 6px; background: var(--bg-primary); border-radius: 999px; overflow: hidden;">
+                                <div style="width: 92%; height: 100%; background: linear-gradient(90deg, #06B6D4, #3B82F6); border-radius: 999px;"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Floating Badge 2 -->
+                    <div class="floating-badge badge-bottom-right">
+                        <span class="pulse-dot"></span> Ready for Placement Opportunities
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT ME SECTION -->
+    <section class="section" id="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">About Me</span>
+                <h2 class="section-title">Driven by Curiosity & Problem-Solving</h2>
+                <p class="section-desc">Get to know my academic background, technical focus, and professional goals.</p>
+            </div>
+
+            <div class="about-grid">
+                <div class="glass-card about-main-card">
+                    <div>
+                        <h3 style="font-size: 1.5rem; margin-bottom: 1rem;">Who I Am</h3>
+                        <p class="about-text">
+                            I am a motivated undergraduate student in Computer Science & Engineering at JNTU Gurajada Vizianagaram (JNTUGV), currently in my 4th year. With a strong foundation in core computer science subjects, I am passionate about constructing efficient software, exploring AI integrations, and learning modern web frameworks.
+                        </p>
+                        <p class="about-text">
+                            My focus centers on leveraging smart AI tools alongside foundational programming languages like Java, Python, and JavaScript to build practical, real-world systems like Attendance Managers, Password Strength Analyzers, and Interactive Study Chatbots.
+                        </p>
+                    </div>
+
+                    <div class="about-highlights">
+                        <div class="highlight-box">
+                            <h5 style="display:flex; align-items:center; gap:0.5rem;">
+                                <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="color:var(--brand-primary);"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                                Career Objective
+                            </h5>
+                            <p>To secure a software developer role where I can contribute to high-impact projects.</p>
+                        </div>
+                        <div class="highlight-box">
+                            <h5 style="display:flex; align-items:center; gap:0.5rem;">
+                                <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="color:var(--brand-accent);"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 01-2 2h-1a2 2 0 01-2-2v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
+                                Key Strengths
+                            </h5>
+                            <p>Fast learner, disciplined problem solver, and proficient in AI-assisted development.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass-card info-list-card">
+                    <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">Quick Information</h3>
+
+                    <div class="info-row">
+                        <div class="info-icon">
+                            <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                        </div>
+                        <div class="info-content">
+                            <label>Location</label>
+                            <span>Eluru, Andhra Pradesh, India</span>
+                        </div>
+                    </div>
+
+                    <div class="info-row">
+                        <div class="info-icon">
+                            <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                        </div>
+                        <div class="info-content">
+                            <label>Mobile Phone</label>
+                            <a href="tel:+918309558941" style="font-weight: 600; color: var(--brand-primary);">+91 8309558941</a>
+                        </div>
+                    </div>
+
+                    <div class="info-row">
+                        <div class="info-icon">
+                            <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0112 20.055a11.952 11.952 0 01-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/></svg>
+                        </div>
+                        <div class="info-content">
+                            <label>Education</label>
+                            <span>B.Tech CSE (4th Year, Present)</span>
+                        </div>
+                    </div>
+
+                    <div class="info-row">
+                        <div class="info-icon">
+                            <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5m0 0h4m-4 0V11m0 5h4m-4 0h4m-4-10h4m-4 0h4"/></svg>
+                        </div>
+                        <div class="info-content">
+                            <label>University</label>
+                            <span>JNTUGV (JNTU Gurajada Vizianagaram)</span>
+                        </div>
+                    </div>
+
+                    <div class="info-row">
+                        <div class="info-icon">
+                            <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                        </div>
+                        <div class="info-content">
+                            <label>Email</label>
+                            <a href="mailto:harshavardhantalari6@gmail.com">harshavardhantalari6@gmail.com</a>
+                        </div>
+                    </div>
+
+                    <div class="info-row">
+                        <div class="info-icon">
+                            <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></svg>
+                        </div>
+                        <div class="info-content">
+                            <label>Profiles</label>
+                            <div style="display: flex; gap: 0.75rem; margin-top: 0.25rem;">
+                                <a href="https://github.com/harshavardhantalari6" target="_blank" style="display:inline-flex; align-items:center; gap:0.2rem;">GitHub <svg width="12" height="12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg></a>
+                                <a href="https://www.linkedin.com/in/talari-harsha-vardhan-babu-1176b7384/" target="_blank" style="display:inline-flex; align-items:center; gap:0.2rem;">LinkedIn <svg width="12" height="12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TECHNICAL SKILLS SECTION -->
+    <section class="section" id="skills">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Technical Competencies</span>
+                <h2 class="section-title">Skills & Technologies</h2>
+                <p class="section-desc">A structured showcase of my programming expertise, tools, and smart workflow methods.</p>
+            </div>
+
+            <div class="skills-tabs">
+                <button class="tab-btn active" onclick="filterSkills('all')">All Skills</button>
+                <button class="tab-btn" onclick="filterSkills('core')">Core Programming</button>
+                <button class="tab-btn" onclick="filterSkills('web')">Web & Databases</button>
+                <button class="tab-btn" onclick="filterSkills('ai')">AI & Smart Workflow</button>
+            </div>
+
+            <div class="skills-grid" id="skillsContainer">
+                
+                <div class="glass-card skill-card" data-category="core">
+                    <div class="skill-icon">
+                        <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
+                    </div>
+                    <div class="skill-info">
+                        <h4>Java Programming</h4>
+                        <p>OOPs, Data Structures, Core Java Logic</p>
+                        <span class="skill-tag">Core Skills</span>
+                    </div>
+                </div>
+
+                <div class="glass-card skill-card" data-category="core">
+                    <div class="skill-icon">
+                        <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                    </div>
+                    <div class="skill-info">
+                        <h4>Python</h4>
+                        <p>Scripting, Logic Building, Algorithm Design</p>
+                        <span class="skill-tag">Core Skills</span>
+                    </div>
+                </div>
+
+                <div class="glass-card skill-card" data-category="web">
+                    <div class="skill-icon">
+                        <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/></svg>
+                    </div>
+                    <div class="skill-info">
+                        <h4>HTML5 & CSS3</h4>
+                        <p>Responsive Layouts, Glassmorphism, UI Design</p>
+                        <span class="skill-tag">Web Technologies</span>
+                    </div>
+                </div>
+
+                <div class="glass-card skill-card" data-category="web">
+                    <div class="skill-icon">
+                        <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                    </div>
+                    <div class="skill-info">
+                        <h4>JavaScript (ES6+)</h4>
+                        <p>DOM Manipulation, Fetch API, Async JS</p>
+                        <span class="skill-tag">Web Technologies</span>
+                    </div>
+                </div>
+
+                <div class="glass-card skill-card" data-category="web">
+                    <div class="skill-icon">
+                        <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"/></svg>
+                    </div>
+                    <div class="skill-info">
+                        <h4>SQL & Databases</h4>
+                        <p>Relational Schemas, Queries, CRUD Ops</p>
+                        <span class="skill-tag">Tools & Technologies</span>
+                    </div>
+                </div>
+
+                <div class="glass-card skill-card" data-category="ai">
+                    <div class="skill-icon">
+                        <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                    </div>
+                    <div class="skill-info">
+                        <h4>AI-Assisted Development</h4>
+                        <p>Accelerated Coding, Prompt Engineering, LLM Integration</p>
+                        <span class="skill-tag">Practical Experience</span>
+                    </div>
+                </div>
+
+                <div class="glass-card skill-card" data-category="core">
+                    <div class="skill-icon">
+                        <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                    </div>
+                    <div class="skill-info">
+                        <h4>Git & GitHub</h4>
+                        <p>Version Control, Repository Management</p>
+                        <span class="skill-tag">Tools & Technologies</span>
+                    </div>
+                </div>
+
+                <div class="glass-card skill-card" data-category="ai">
+                    <div class="skill-icon">
+                        <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg>
+                    </div>
+                    <div class="skill-info">
+                        <h4>Quantum Computing Fundamentals</h4>
+                        <p>Qubit Mechanics, Circuit Conceptualization</p>
+                        <span class="skill-tag">Research & Exploration</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ACADEMIC PROJECTS SECTION -->
+    <section class="section" id="projects">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Featured Work</span>
+                <h2 class="section-title">Academic Projects</h2>
+                <p class="section-desc">Key projects built during my B.Tech CSE degree showcasing practical implementation.</p>
+            </div>
+
+            <div class="projects-grid">
+                
+                <!-- Project 1 -->
+                <div class="glass-card project-card">
+                    <div>
+                        <div class="project-header">
+                            <span class="project-category">Full-Stack System</span>
+                            <span class="svg-icon" style="color:var(--brand-primary);">
+                                <svg width="22" height="22" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+                            </span>
+                        </div>
+                        <h3 class="project-title">Student Attendance Management System</h3>
+                        <p class="project-desc">
+                            A smart management software designed to automate daily student attendance recording, track percentage trends, and generate faculty reports.
+                        </p>
+                        <ul class="project-features">
+                            <li>Automated daily roll-call tracking</li>
+                            <li>Real-time percentage calculations</li>
+                            <li>Exportable attendance summary reports</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div class="tech-stack-pills">
+                            <span class="tech-pill">Java</span>
+                            <span class="tech-pill">Python</span>
+                            <span class="tech-pill">MySQL</span>
+                            <span class="tech-pill">HTML/CSS</span>
+                        </div>
+                        <div class="project-footer">
+                            <a href="https://github.com/harshavardhantalari6" target="_blank" class="project-link" style="display:inline-flex; align-items:center; gap:0.25rem;">
+                                View Code <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+                            </a>
+                            <span style="font-size: 0.8rem; color: var(--text-subtle);">Academic Project</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="glass-card project-card">
+                    <div>
+                        <div class="project-header">
+                            <span class="project-category">Cybersecurity & AI</span>
+                            <span class="svg-icon" style="color:var(--brand-accent);">
+                                <svg width="22" height="22" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+                            </span>
+                        </div>
+                        <h3 class="project-title">AI-Powered Password Strength Analyzer</h3>
+                        <p class="project-desc">
+                            An intelligent cybersecurity utility that calculates character entropy, detects common pattern vulnerabilities, and suggests cryptographic improvements.
+                        </p>
+                        <ul class="project-features">
+                            <li>Real-time entropy & complexity scoring</li>
+                            <li>Dictionary & pattern risk identification</li>
+                            <li>Actionable security enhancement tips</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div class="tech-stack-pills">
+                            <span class="tech-pill">Python</span>
+                            <span class="tech-pill">NLP Heuristics</span>
+                            <span class="tech-pill">Regex</span>
+                            <span class="tech-pill">UI</span>
+                        </div>
+                        <div class="project-footer">
+                            <a href="https://github.com/harshavardhantalari6" target="_blank" class="project-link" style="display:inline-flex; align-items:center; gap:0.25rem;">
+                                View Code <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+                            </a>
+                            <span style="font-size: 0.8rem; color: var(--text-subtle);">Academic Project</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="glass-card project-card">
+                    <div>
+                        <div class="project-header">
+                            <span class="project-category">AI Chat Assistant</span>
+                            <span class="svg-icon" style="color:var(--brand-primary);">
+                                <svg width="22" height="22" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
+                            </span>
+                        </div>
+                        <h3 class="project-title">Student Study Purpose Chatbot</h3>
+                        <p class="project-desc">
+                            An AI-driven interactive study assistant focused on explaining complex CSE topics, summarizing lecture notes, and providing instant Q&A support.
+                        </p>
+                        <ul class="project-features">
+                            <li>Instant concept clarification & summaries</li>
+                            <li>Tailored study recommendations</li>
+                            <li>Smart prompt engineering workflows</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div class="tech-stack-pills">
+                            <span class="tech-pill">Python</span>
+                            <span class="tech-pill">LLM API</span>
+                            <span class="tech-pill">Prompt Eng.</span>
+                            <span class="tech-pill">JavaScript</span>
+                        </div>
+                        <div class="project-footer">
+                            <a href="https://github.com/harshavardhantalari6" target="_blank" class="project-link" style="display:inline-flex; align-items:center; gap:0.25rem;">
+                                View Code <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+                            </a>
+                            <span style="font-size: 0.8rem; color: var(--text-subtle);">Academic Project</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="glass-card project-card">
+                    <div>
+                        <div class="project-header">
+                            <span class="project-category">Database Portal</span>
+                            <span class="svg-icon" style="color:var(--brand-accent);">
+                                <svg width="22" height="22" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0112 20.055a11.952 11.952 0 01-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/></svg>
+                            </span>
+                        </div>
+                        <h3 class="project-title">Alumni Data Management System</h3>
+                        <p class="project-desc">
+                            A centralized web directory for managing university alumni records, facilitating mentorship connections, and recording employment updates.
+                        </p>
+                        <ul class="project-features">
+                            <li>Searchable graduate directory</li>
+                            <li>Secure admin CRUD dashboard</li>
+                            <li>Mentorship & placement tracking</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div class="tech-stack-pills">
+                            <span class="tech-pill">JavaScript</span>
+                            <span class="tech-pill">HTML5/CSS3</span>
+                            <span class="tech-pill">MySQL</span>
+                            <span class="tech-pill">PHP/Node</span>
+                        </div>
+                        <div class="project-footer">
+                            <a href="https://github.com/harshavardhantalari6" target="_blank" class="project-link" style="display:inline-flex; align-items:center; gap:0.25rem;">
+                                View Code <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+                            </a>
+                            <span style="font-size: 0.8rem; color: var(--text-subtle);">Academic Project</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="glass-card project-card">
+                    <div>
+                        <div class="project-header">
+                            <span class="project-category">Research & Algo</span>
+                            <span class="svg-icon" style="color:var(--brand-primary);">
+                                <svg width="22" height="22" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg>
+                            </span>
+                        </div>
+                        <h3 class="project-title">Quantum Computing Exploration</h3>
+                        <p class="project-desc">
+                            A conceptual research and algorithmic simulation project exploring quantum gates, qubit superposition, and cryptographic implications.
+                        </p>
+                        <ul class="project-features">
+                            <li>Quantum circuit simulation models</li>
+                            <li>Superposition & entanglement logic</li>
+                            <li>Analysis of quantum security impacts</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div class="tech-stack-pills">
+                            <span class="tech-pill">Python</span>
+                            <span class="tech-pill">Quantum Sim</span>
+                            <span class="tech-pill">Algorithms</span>
+                        </div>
+                        <div class="project-footer">
+                            <a href="https://github.com/harshavardhantalari6" target="_blank" class="project-link" style="display:inline-flex; align-items:center; gap:0.25rem;">
+                                View Code <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+                            </a>
+                            <span style="font-size: 0.8rem; color: var(--text-subtle);">Research Project</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- GITHUB LIVE WORK SECTION -->
+    <section class="section" id="github">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Open Source & Repositories</span>
+                <h2 class="section-title">Live GitHub Work</h2>
+                <p class="section-desc">Dynamically fetched repositories from <a href="https://github.com/harshavardhantalari6" target="_blank" style="color: var(--brand-primary);">@harshavardhantalari6</a>.</p>
+            </div>
+
+            <div class="github-controls">
+                <div class="search-box">
+                    <span class="search-icon">
+                        <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+                    </span>
+                    <input type="text" class="search-input" id="repoSearch" placeholder="Search GitHub repositories..." oninput="filterRepos()">
+                </div>
+                <div style="font-size: 0.875rem; color: var(--text-subtle);">
+                    Fetched directly from GitHub API
+                </div>
+            </div>
+
+            <div class="projects-grid" id="githubReposContainer">
+                <div class="glass-card repo-card" style="grid-column: 1 / -1; text-align: center; padding: 3rem;">
+                    <p style="color: var(--text-muted);">Fetching repositories from GitHub...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALLERY / VISUAL SHOWCASE SECTION -->
+    <section class="section" id="gallery">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Visual Highlights</span>
+                <h2 class="section-title">Gallery & Achievements</h2>
+                <p class="section-desc">Snapshots of project architectures, academic certifications, and milestones.</p>
+            </div>
+
+            <div class="gallery-grid">
+                
+                <div class="glass-card gallery-card">
+                    <div class="gallery-bg" style="background: linear-gradient(135deg, #1E3A8A, #3B82F6);">
+                        <svg width="40" height="40" fill="none" stroke="#FFF" viewBox="0 0 24 24" style="margin-bottom:0.5rem;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+                        <h4 style="font-size: 1.1rem; color: #FFF;">Attendance Manager</h4>
+                        <p style="font-size: 0.8rem; color: #93C5FD;">System Dashboard Blueprint</p>
+                    </div>
+                    <div class="gallery-overlay">
+                        <h4>Attendance Management Flow</h4>
+                        <p>Database schema & percentage logic UI design</p>
+                    </div>
+                </div>
+
+                <div class="glass-card gallery-card">
+                    <div class="gallery-bg" style="background: linear-gradient(135deg, #065F46, #10B981);">
+                        <svg width="40" height="40" fill="none" stroke="#FFF" viewBox="0 0 24 24" style="margin-bottom:0.5rem;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+                        <h4 style="font-size: 1.1rem; color: #FFF;">Password Strength AI</h4>
+                        <p style="font-size: 0.8rem; color: #A7F3D0;">Entropy Scoring Logic</p>
+                    </div>
+                    <div class="gallery-overlay">
+                        <h4>Password Entropy Model</h4>
+                        <p>Algorithmic calculation of credential security</p>
+                    </div>
+                </div>
+
+                <div class="glass-card gallery-card">
+                    <div class="gallery-bg" style="background: linear-gradient(135deg, #4C1D95, #8B5CF6);">
+                        <svg width="40" height="40" fill="none" stroke="#FFF" viewBox="0 0 24 24" style="margin-bottom:0.5rem;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M8 10h.01M12 10h.01M16 10h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
+                        <h4 style="font-size: 1.1rem; color: #FFF;">Study Bot Prototype</h4>
+                        <p style="font-size: 0.8rem; color: #DDD6FE;">LLM Prompt Architecture</p>
+                    </div>
+                    <div class="gallery-overlay">
+                        <h4>Interactive Study Assistant</h4>
+                        <p>Prompt engineering workflows for CSE curriculum</p>
+                    </div>
+                </div>
+
+                <div class="glass-card gallery-card">
+                    <div class="gallery-bg" style="background: linear-gradient(135deg, #831843, #EC4899);">
+                        <svg width="40" height="40" fill="none" stroke="#FFF" viewBox="0 0 24 24" style="margin-bottom:0.5rem;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M12 14l9-5-9-5-9 5 9 5z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0112 20.055a11.952 11.952 0 01-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/></svg>
+                        <h4 style="font-size: 1.1rem; color: #FFF;">JNTUGV Campus</h4>
+                        <p style="font-size: 0.8rem; color: #FBCFE8;">4th Year CSE Journey</p>
+                    </div>
+                    <div class="gallery-overlay">
+                        <h4>Academic Milestones</h4>
+                        <p>Computer Science & Engineering studies at JNTUGV</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- EDUCATION SECTION -->
+    <section class="section" id="education">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Academic Qualifications</span>
+                <h2 class="section-title">Education Journey</h2>
+                <p class="section-desc">My academic background in Computer Science & Engineering.</p>
+            </div>
+
+            <div class="timeline">
+                
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="glass-card timeline-card">
+                        <span class="timeline-date">2022 – 2026 (Present, 4th Year)</span>
+                        <h3 class="timeline-title">Bachelor of Technology (B.Tech) - Computer Science & Engineering</h3>
+                        <p class="timeline-institution">JNTU Gurajada Vizianagaram (JNTUGV), Andhra Pradesh</p>
+                        <p style="color: var(--text-muted); font-size: 0.9rem;">
+                            Currently in 4th Year. Core coursework includes Data Structures & Algorithms, Object-Oriented Programming (Java/Python), Database Management Systems, Web Technologies, Computer Networks, and Operating Systems.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="glass-card timeline-card">
+                        <span class="timeline-date">Intermediate Education (MPC)</span>
+                        <h3 class="timeline-title">Board of Intermediate Education, Andhra Pradesh</h3>
+                        <p class="timeline-institution">Eluru, Andhra Pradesh</p>
+                        <p style="color: var(--text-muted); font-size: 0.9rem;">
+                            Focused on Mathematics, Physics, and Chemistry (MPC) with a strong foundation in analytical reasoning and logic.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="section" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Get In Touch</span>
+                <h2 class="section-title">Contact & Placement Enquiries</h2>
+                <p class="section-desc">Feel free to reach out for opportunities, projects, or professional discussions.</p>
+            </div>
+
+            <div class="contact-grid">
+                
+                <div class="glass-card contact-info-card">
+                    <h3 style="font-size: 1.5rem;">Contact Information</h3>
+
+                    <div class="contact-method">
+                        <div class="contact-icon-box">
+                            <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                        </div>
+                        <div class="contact-details">
+                            <label>Direct Email</label>
+                            <a href="mailto:harshavardhantalari6@gmail.com">harshavardhantalari6@gmail.com</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-method">
+                        <div class="contact-icon-box">
+                            <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                        </div>
+                        <div class="contact-details">
+                            <label>Mobile Phone / WhatsApp</label>
+                            <a href="tel:+918309558941" style="font-weight:600; color:var(--text-main);">+91 8309558941</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-method">
+                        <div class="contact-icon-box">
+                            <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                        </div>
+                        <div class="contact-details">
+                            <label>Location</label>
+                            <p>Eluru, Andhra Pradesh, India</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-method">
+                        <div class="contact-icon-box">
+                            <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                        </div>
+                        <div class="contact-details">
+                            <label>LinkedIn Profile</label>
+                            <a href="https://www.linkedin.com/in/talari-harsha-vardhan-babu-1176b7384/" target="_blank" style="display:inline-flex; align-items:center; gap:0.25rem;">
+                                Connect on LinkedIn <svg width="12" height="12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="contact-method">
+                        <div class="contact-icon-box">
+                            <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
+                        </div>
+                        <div class="contact-details">
+                            <label>GitHub Profile</label>
+                            <a href="https://github.com/harshavardhantalari6" target="_blank" style="display:inline-flex; align-items:center; gap:0.25rem;">
+                                github.com/harshavardhantalari6 <svg width="12" height="12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-secondary" onclick="copyEmail()" style="margin-top: 1rem; width: 100%; display:inline-flex; align-items:center; justify-content:center; gap:0.5rem;">
+                        <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+                        Copy Email Address
+                    </button>
+                </div>
+
+                <div class="glass-card contact-form-card">
+                    <h3 style="font-size: 1.5rem; margin-bottom: 1.25rem;">Send a Message</h3>
+                    <form id="contactForm" onsubmit="handleFormSubmit(event)">
+                        <div class="form-group">
+                            <label class="form-label" for="contactName">Your Name</label>
+                            <input type="text" class="form-input" id="contactName" required placeholder="e.g. Recruiter / Hiring Manager">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="contactEmail">Your Email</label>
+                            <input type="email" class="form-input" id="contactEmail" required placeholder="e.g. recruiter@company.com">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="contactMessage">Message</label>
+                            <textarea class="form-textarea" id="contactMessage" required placeholder="Write your message or placement opportunity details..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%; display:inline-flex; align-items:center; justify-content:center; gap:0.5rem;">
+                            <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/></svg>
+                            Send Message to Gmail
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <p>© 2026 Talari Harsha Vardhan Babu. All rights reserved.</p>
+            <p style="font-size: 0.8rem; margin-top: 0.5rem; color: var(--text-subtle);">
+                B.Tech Computer Science Undergraduate | Designed & Developed with Clean Web Standards
+            </p>
+        </div>
+    </footer>
+
+    <!-- RESUME MODAL -->
+    <div class="modal-overlay" id="resumeModal">
+        <div class="modal-card">
+            <button class="modal-close" onclick="closeResumeModal()">
+                <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+            </button>
+
+            <div style="border-bottom: 2px solid var(--border-glass); padding-bottom: 1.5rem; margin-bottom: 1.5rem;" class="modal-header-print">
+                <h2 style="font-size: 2rem; color: var(--text-main);">TALARI HARSHA VARDHAN BABU</h2>
+                <p style="font-size: 1rem; color: var(--brand-primary); font-weight: 600;">
+                    B.Tech Student, Computer Science Undergraduate
+                </p>
+                <div style="display: flex; gap: 1.25rem; font-size: 0.85rem; color: var(--text-muted); margin-top: 0.5rem; flex-wrap: wrap; align-items:center;">
+                    <span>Email: harshavardhantalari6@gmail.com</span>
+                    <span>Phone: +91 8309558941</span>
+                    <span>Location: Eluru, AP, India</span>
+                    <span>GitHub: github.com/harshavardhantalari6</span>
+                </div>
+            </div>
+
+            <!-- Resume Content -->
+            <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+                
+                <div>
+                    <h3 style="font-size: 1.1rem; color: var(--brand-primary); text-transform: uppercase; letter-spacing: 0.05em; border-bottom: 1px solid var(--border-glass); padding-bottom: 0.25rem; margin-bottom: 0.5rem;">
+                        Professional Objective
+                    </h3>
+                    <p style="font-size: 0.925rem; color: var(--text-muted); line-height: 1.6;">
+                        Motivated Computer Science undergraduate student seeking an entry-level software development or engineering placement. Eager to apply skills in Java, Python, Web Development, and AI-assisted workflows to solve complex industry problems.
+                    </p>
+                </div>
+
+                <div>
+                    <h3 style="font-size: 1.1rem; color: var(--brand-primary); text-transform: uppercase; letter-spacing: 0.05em; border-bottom: 1px solid var(--border-glass); padding-bottom: 0.25rem; margin-bottom: 0.5rem;">
+                        Education
+                    </h3>
+                    <div style="margin-bottom: 0.75rem;">
+                        <div style="display: flex; justify-content: space-between; font-weight: 700; color: var(--text-main);">
+                            <span>B.Tech in Computer Science & Engineering</span>
+                            <span>2022 – 2026 (Present)</span>
+                        </div>
+                        <p style="font-size: 0.875rem; color: var(--text-muted);">JNTU Gurajada Vizianagaram (JNTUGV), Andhra Pradesh</p>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 style="font-size: 1.1rem; color: var(--brand-primary); text-transform: uppercase; letter-spacing: 0.05em; border-bottom: 1px solid var(--border-glass); padding-bottom: 0.25rem; margin-bottom: 0.5rem;">
+                        Technical Skills
+                    </h3>
+                    <ul style="list-style: square; padding-left: 1.2rem; font-size: 0.9rem; color: var(--text-muted); display: grid; grid-template-columns: 1fr 1fr; gap: 0.4rem;">
+                        <li><strong>Programming:</strong> Java, Python, JavaScript, HTML, CSS</li>
+                        <li><strong>Databases:</strong> SQL, MySQL Schema Design</li>
+                        <li><strong>AI & Tools:</strong> Prompt Engineering, AI Coding Tools</li>
+                        <li><strong>Developer Tools:</strong> Git, GitHub, VS Code</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 style="font-size: 1.1rem; color: var(--brand-primary); text-transform: uppercase; letter-spacing: 0.05em; border-bottom: 1px solid var(--border-glass); padding-bottom: 0.25rem; margin-bottom: 0.5rem;">
+                        Key Projects
+                    </h3>
+                    <div style="display: flex; flex-direction: column; gap: 0.75rem;">
+                        <div>
+                            <strong style="color: var(--text-main);">1. Student Attendance Management System</strong>
+                            <p style="font-size: 0.85rem; color: var(--text-muted);">Java, Python, MySQL | Automated tracking and percentage report generator.</p>
+                        </div>
+                        <div>
+                            <strong style="color: var(--text-main);">2. AI-Powered Password Strength Analyzer</strong>
+                            <p style="font-size: 0.85rem; color: var(--text-muted);">Python, Entropy Calculation | Real-time security scoring and pattern detection.</p>
+                        </div>
+                        <div>
+                            <strong style="color: var(--text-main);">3. Student Study Purpose Chatbot</strong>
+                            <p style="font-size: 0.85rem; color: var(--text-muted);">Python, AI Prompts | Interactive CSE study assistant and concept summarizer.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div style="margin-top: 2rem; display: flex; justify-content: flex-end; gap: 1rem;" class="modal-actions">
+                <button class="btn btn-secondary" onclick="closeResumeModal()">Close</button>
+                <button class="btn btn-primary" onclick="window.print()" style="display:inline-flex; align-items:center; gap:0.5rem;">
+                    <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"/></svg>
+                    Print / Save PDF
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- TOAST NOTIFICATION -->
+    <div class="toast" id="toast">
+        <span id="toastMsg">Email copied to clipboard!</span>
+    </div>
+
+    <!-- INLINE JAVASCRIPT LOGIC -->
+    <script>
+        const sunSvg = `<svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>`;
+        const moonSvg = `<svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>`;
+
+        // DARK / LIGHT THEME TOGGLE LOGIC
+        const themeToggle = document.getElementById('themeToggle');
+        const themeIcon = document.getElementById('themeIcon');
+        
+        // Check saved or default to Elegant Dark
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'light') {
+            document.documentElement.classList.remove('dark');
+            document.documentElement.classList.add('light');
+            themeIcon.innerHTML = moonSvg;
+        } else {
+            document.documentElement.classList.add('dark');
+            document.documentElement.classList.remove('light');
+            themeIcon.innerHTML = sunSvg;
+        }
+
+        themeToggle.addEventListener('click', () => {
+            const isDark = document.documentElement.classList.contains('dark');
+            if (isDark) {
+                document.documentElement.classList.remove('dark');
+                document.documentElement.classList.add('light');
+                localStorage.setItem('theme', 'light');
+                themeIcon.innerHTML = moonSvg;
+                showToast('Switched to Light Mode');
+            } else {
+                document.documentElement.classList.add('dark');
+                document.documentElement.classList.remove('light');
+                localStorage.setItem('theme', 'dark');
+                themeIcon.innerHTML = sunSvg;
+                showToast('Switched to Elegant Dark Mode');
+            }
+        });
+
+        // MOBILE MENU TOGGLE
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navLinks = document.getElementById('navLinks');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('mobile-open');
+        });
+
+        // Close mobile menu when a link is clicked
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('mobile-open');
+            });
+        });
+
+        // SKILLS FILTERING LOGIC
+        function filterSkills(category) {
+            const buttons = document.querySelectorAll('.skills-tabs .tab-btn');
+            buttons.forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+
+            const cards = document.querySelectorAll('#skillsContainer .skill-card');
+            cards.forEach(card => {
+                if (category === 'all' || card.dataset.category === category) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // GITHUB API FETCHING LOGIC
+        let fetchedRepos = [];
+
+        async function fetchGitHubRepos() {
+            const container = document.getElementById('githubReposContainer');
+            const username = 'harshavardhantalari6';
+
+            try {
+                const response = await fetch(`https://api.github.com/users/${username}/repos?sort=updated&per_page=10`);
+                if (!response.ok) throw new Error('Failed to fetch from GitHub');
+                
+                const repos = await response.json();
+                fetchedRepos = repos;
+
+                if (!repos || repos.length === 0) {
+                    renderFallbackRepos();
+                    return;
+                }
+
+                renderRepos(repos);
+            } catch (error) {
+                console.warn('GitHub API fetch failed or rate limited, rendering showcase repos:', error);
+                renderFallbackRepos();
+            }
+        }
+
+        function renderRepos(repos) {
+            const container = document.getElementById('githubReposContainer');
+            container.innerHTML = '';
+
+            const boxSvg = `<svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="color:var(--brand-primary);"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg>`;
+            const starSvg = `<svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24" style="color:#F59E0B;"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>`;
+            const forkSvg = `<svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7a3 3 0 100-6 3 3 0 000 6zm8 14a3 3 0 100-6 3 3 0 000 6zm-8 0a3 3 0 100-6 3 3 0 000 6m0-8v2a2 2 0 002 2h4a2 2 0 002-2v-2"/></svg>`;
+
+            repos.slice(0, 6).forEach(repo => {
+                const lang = repo.language || 'Code';
+                const card = document.createElement('div');
+                card.className = 'glass-card repo-card';
+                card.innerHTML = `
+                    <div>
+                        <div class="repo-name" style="display:flex; align-items:center; gap:0.5rem;">
+                            ${boxSvg}
+                            <a href="${repo.html_url}" target="_blank" style="color: var(--text-main); text-decoration: none;">
+                                ${repo.name}
+                            </a>
+                        </div>
+                        <p style="font-size: 0.875rem; color: var(--text-muted); line-height: 1.5; margin-bottom: 1rem;">
+                            ${repo.description || 'Public GitHub repository showcasing software implementation.'}
+                        </p>
+                    </div>
+                    <div>
+                        <div class="tech-pill" style="display: inline-block; margin-bottom: 0.5rem;">
+                            <span class="lang-dot" style="background: ${getLanguageColor(lang)};"></span> ${lang}
+                        </div>
+                        <div class="repo-stats" style="display:flex; align-items:center; gap:1rem;">
+                            <span class="repo-stat" style="display:inline-flex; align-items:center; gap:0.25rem;">${starSvg} ${repo.stargazers_count || 0}</span>
+                            <span class="repo-stat" style="display:inline-flex; align-items:center; gap:0.25rem;">${forkSvg} ${repo.forks_count || 0}</span>
+                            <a href="${repo.html_url}" target="_blank" style="margin-left: auto; color: var(--brand-primary); font-weight: 600; text-decoration: none; font-size: 0.825rem; display:inline-flex; align-items:center; gap:0.25rem;">
+                                View Repo <svg width="12" height="12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                `;
+                container.appendChild(card);
+            });
+        }
+
+        function renderFallbackRepos() {
+            const fallbackRepos = [
+                {
+                    name: 'Student-Attendance-Management-System',
+                    description: 'Java and MySQL based attendance recording system for university tracking.',
+                    language: 'Java',
+                    stars: 3,
+                    forks: 1,
+                    url: 'https://github.com/harshavardhantalari6'
+                },
+                {
+                    name: 'AI-Password-Strength-Analyzer',
+                    description: 'Entropy calculation algorithm for detecting weak user credentials.',
+                    language: 'Python',
+                    stars: 5,
+                    forks: 2,
+                    url: 'https://github.com/harshavardhantalari6'
+                },
+                {
+                    name: 'Student-Study-Purpose-Chatbot',
+                    description: 'Prompt engineered interactive assistant for Computer Science undergraduates.',
+                    language: 'Python',
+                    stars: 4,
+                    forks: 1,
+                    url: 'https://github.com/harshavardhantalari6'
+                },
+                {
+                    name: 'Alumni-Data-Management-System',
+                    description: 'Web directory for maintaining graduate records and placement mentorship.',
+                    language: 'JavaScript',
+                    stars: 2,
+                    forks: 0,
+                    url: 'https://github.com/harshavardhantalari6'
+                }
+            ];
+            renderRepos(fallbackRepos.map(r => ({
+                name: r.name,
+                description: r.description,
+                language: r.language,
+                stargazers_count: r.stars,
+                forks_count: r.forks,
+                html_url: r.url
+            })));
+        }
+
+        function getLanguageColor(lang) {
+            const colors = {
+                'Java': '#b07219',
+                'Python': '#3572A5',
+                'JavaScript': '#f1e05a',
+                'HTML': '#e34c26',
+                'CSS': '#563d7c',
+                'TypeScript': '#3178c6'
+            };
+            return colors[lang] || '#3B82F6';
+        }
+
+        function filterRepos() {
+            const query = document.getElementById('repoSearch').value.toLowerCase();
+            if (!fetchedRepos || fetchedRepos.length === 0) return;
+            const filtered = fetchedRepos.filter(repo => 
+                repo.name.toLowerCase().includes(query) || 
+                (repo.description && repo.description.toLowerCase().includes(query))
+            );
+            renderRepos(filtered);
+        }
+
+        // RESUME MODAL LOGIC
+        function openResumeModal() {
+            document.getElementById('resumeModal').classList.add('active');
+        }
+
+        function closeResumeModal() {
+            document.getElementById('resumeModal').classList.remove('active');
+        }
+
+        // COPY EMAIL TO CLIPBOARD
+        function copyEmail() {
+            navigator.clipboard.writeText('harshavardhantalari6@gmail.com').then(() => {
+                showToast('Email address copied to clipboard!');
+            }).catch(() => {
+                showToast('Failed to copy email');
+            });
+        }
+
+        // TOAST NOTIFICATION
+        function showToast(msg) {
+            const toast = document.getElementById('toast');
+            document.getElementById('toastMsg').textContent = msg;
+            toast.classList.add('show');
+            setTimeout(() => {
+                toast.classList.remove('show');
+            }, 3000);
+        }
+
+        // FORM SUBMISSION HANDLER - DIRECT TO GMAIL
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            const name = document.getElementById('contactName').value;
+            const email = document.getElementById('contactEmail').value;
+            const message = document.getElementById('contactMessage').value;
+
+            const targetEmail = 'harshavardhantalari6@gmail.com';
+            const subject = encodeURIComponent(`Portfolio Enquiry from ${name}`);
+            const body = encodeURIComponent(
+                `Hello Harsha,\n\nYou received a new message from your portfolio website:\n\nName: ${name}\nEmail: ${email}\n\nMessage:\n${message}\n\n---\nSent via Talari Harsha Vardhan Babu Portfolio`
+            );
+
+            // Trigger mailto client / Gmail draft directly
+            window.location.href = `mailto:${targetEmail}?subject=${subject}&body=${body}`;
+
+            showToast(`Opening email application to send message to ${targetEmail}...`);
+            document.getElementById('contactForm').reset();
+        }
+
+        // UPLOAD REAL PHOTO FUNCTION
+        function uploadRealPhoto(event) {
+            const file = event.target.files && event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    const dataUrl = e.target.result;
+                    const img = document.getElementById('profileImg');
+                    if (img) {
+                        img.src = dataUrl;
+                        try {
+                            localStorage.setItem('user_real_profile_photo', dataUrl);
+                            showToast('Real profile photo loaded!');
+                        } catch (err) {
+                            showToast('Photo loaded for this session!');
+                        }
+                    }
+                };
+                reader.readAsDataURL(file);
+            }
+        }
+
+        // INITIALIZE ON LOAD
+        window.addEventListener('DOMContentLoaded', () => {
+            fetchGitHubRepos();
+            const savedPhoto = localStorage.getItem('user_real_profile_photo');
+            if (savedPhoto) {
+                const img = document.getElementById('profileImg');
+                if (img) img.src = savedPhoto;
+            }
+        });
+    </script>
+</body>
+</html>
