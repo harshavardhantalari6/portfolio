@@ -2561,11 +2561,6 @@
         // INITIALIZE ON LOAD
         window.addEventListener('DOMContentLoaded', () => {
             fetchGitHubRepos();
-            const savedPhoto = localStorage.getItem('user_real_profile_photo');
-            if (savedPhoto) {
-                const img = document.getElementById('profileImg');
-                if (img) img.src = savedPhoto;
-            }
         });
     </script>
 </body>
